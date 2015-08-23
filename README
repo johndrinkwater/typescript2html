@@ -1,0 +1,11 @@
+Making typescript files look pretty with minimal HTML
+
+*Currently a work in progress, you will be disappointed if you clone this.*
+
+Output does not include CSS, as it is assumed you will be using the stylesheet
+I have not written yet :^)
+
+This is using two ANSI escapes that are not found elsewhere (and might be
+redefined in future) to improve tagging of user generated input, but from the
+current presentation of these escapes by `scriptreplay`, they do need
+replacing.
