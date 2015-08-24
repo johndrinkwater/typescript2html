@@ -160,6 +160,23 @@ if __name__ == '__main__':
                     stateWritten = False
                     skip = 4
                     continue
+                elif '?' == data[ index + 2 ]:
+                    # eat all data up to a character
+                    idx = 3
+                    forward = True
+                    while forward:
+                        char = data[ index + idx ]
+                        if char.isdigit():
+                            idx += 1
+                        elif ';' == char:
+                            # compound statement, still ignore
+                            idx += 1
+                        else:
+                            forward = False
+                            skip = idx
+                else:
+                    output += "\x1b["
+                    skip = 1
 
             elif '\n' == data[ index ]:
                 ( state, output ) = closeState( state, output )
