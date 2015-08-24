@@ -26,8 +26,8 @@ def printusage():
 
 escapement = '\x1b\['
 escaped = '\x1b['
-USERSTART = escapement + 'y'
-USEREND = escapement + 'z'
+USERSTART = '\x1bV'
+USEREND = '\x1bW'
 
 if __name__ == '__main__':
 
